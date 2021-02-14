@@ -24,4 +24,3 @@ module.exports = {
     return file;
   },
 };
-console.log();
