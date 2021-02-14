@@ -334,7 +334,7 @@ describe('Module 4', () => {
         'You should import the method named `fetchBooks`.',
       );
       expect(_.get(res, 'body[0].source.value', '')).to.equal(
-        './services',
+        './services.js',
         'You should import `fetchWithTimeout` from `./services`.',
       );
     }

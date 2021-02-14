@@ -1,4 +1,4 @@
-import {fetchWithTimeout, fetchMovies, fetchBooks} from './services.js';
+import {fetchWithTimeout, fetchMovies, fetchBooks} from './services';
 const movies = require ('./data/movies.json');
 
 /* ------ Old code from module 3 ------  */ 
@@ -28,5 +28,5 @@ function getBooksAndMovies(){
 
 const getBooksAndMoviesPromise = getBooksAndMovies();
 getBooksAndMoviesPromise.then(results => {
-    console.log(results);
+    console.log("getBooksAndMoviesPromise",results);
 });
