@@ -1,4 +1,4 @@
-import {fetchWithTimeout, fetchMovies, fetchBooks, asyncFetchBooks, asyncFetchMovies} from './services.js';
+import {fetchWithTimeout, fetchMovies, fetchBooks, asyncFetchBooks, asyncFetchMovies} from 'services.js';
 const movies = require ('./data/movies.json');
 
 /* ------ Old code from module 3 ------  */ 
@@ -49,17 +49,17 @@ async function getBooksAndMoviesAsync() {
      return {books, movies};
     }
     catch(error){
-     console.log("Error fetching books and moives", error);
+     console.log("Error fetching books and movies", error);
     }
 }
 
 async function getBooksOrMoviesAsync() {
     try{
-     const values = await Promise.race([asyncFetchBooks(), asyncFetchMovies]);
+     const values = await Promise.race([asyncFetchBooks(), asyncFetchMovies()]);
      return values;
     }
     catch(error){
-        console.log("Error waiting for the promise race", error);
+        console.error("Error waiting for the promise race", error);
     }
 }
 
