@@ -1,4 +1,4 @@
-import {fetchWithTimeout, fetchMovies, fetchBooks, asyncFetchBooks, asyncFetchMovies} from 'services.js';
+import {fetchWithTimeout, fetchMovies, fetchBooks, asyncFetchBooks, asyncFetchMovies} from './services';
 const movies = require ('./data/movies.json');
 
 /* ------ Old code from module 3 ------  */ 
@@ -71,7 +71,7 @@ getBooksAndMoviesAsync().then(results => {
 });
 
 getBooksOrMoviesAsync().then(results => {
-    console.log("movies OR books",{
-        results
+    console.log("movies OR books", {
+        results,
     });
 });
